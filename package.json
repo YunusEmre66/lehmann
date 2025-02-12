@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "framer-motion": "^12.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^7.1.5",
+    "styled-components": "^6.1.15",
+    "swiper": "^10.0.0",
+    "tailwindcss": "^4.0.5"
+  },
+  "devDependencies": {
+    "vite": "^4.0.4"
+  },
+  "license": "MIT",
+  "name": "swiper-react-mousewheel-control",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "start": "vite"
+  },
+  "tags": [
+    "swiper"
+  ]
+}
