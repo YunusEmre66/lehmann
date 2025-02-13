@@ -30,9 +30,10 @@ const StyledWrapper = styled.div`
   align-items: center;
   height: 100vh; // yani tam ekran yüksekliği
   background-color: #f0f0f0;
+  font-size: 20px; /* Daha okunabilir bir font büyüklüğü */
   color: #333;
-  font-size: 2rem;
   text-align: center;
+  margin-bottom: 10px;
 `;
 
 const StyledTitle = styled.h1`

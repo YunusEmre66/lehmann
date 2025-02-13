@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IoIosArrowBack } from 'react-icons/io';
 
-import { Mousewheel, Pagination } from 'swiper/modules';
+import {Pagination } from 'swiper/modules';
 import shadowData from '../datas/ShadowData';
 import FigureData from '../datas/FigurData';
 import { Navigation } from 'swiper/modules';
