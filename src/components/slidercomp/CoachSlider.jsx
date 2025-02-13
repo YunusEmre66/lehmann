@@ -10,18 +10,6 @@ import { Mousewheel, Pagination } from 'swiper/modules';
 import ImagesData from '../../datas/ImagesData';
 
 export default function CoachSlider() {
-    // Slider ayarlarını useMemo ile optimize ediyoruz
-    const swiperConfig = useMemo(() => ({
-        direction: 'vertical',
-        autoHeight: true,
-        pagination: {
-            clickable: true,
-            el : '.swiper-pagination',
-        },
-        modules: [Pagination,Mousewheel],
-        className: "mySwiper"
-    }), []); // Boş dependency array ile sadece bir kez oluşturulur
-
     const slideStyles = useMemo(() => ({
         width: '100%',
         height: 'auto',
@@ -30,21 +18,34 @@ export default function CoachSlider() {
     }), []);
 
     return (
+        <>
+            <Swiper
+                direction="vertical"
+                slidesPerView={1}
+                spaceBetween={30}
+                autoHeight={true}
+                mousewheel={true}
+                pagination={{
+                    
+                    clickable: true,
+                }}
+                modules={[Pagination, Mousewheel]}
+                className="mySwiper"
+            >
+                {ImagesData.map((image, index) => (
+                    <SwiperSlide key={`slide-${index}`}>
+                        <img
+                            src={image}
+                            alt={`Slide ${index + 1}`}
+                            style={slideStyles}
+                            loading="lazy" // Lazy loading ekledik
+                        />
+                    </SwiperSlide>
+                ))}
+                <div className="swiper-pagination"></div>
+            </Swiper>
 
-
-        <Swiper {...swiperConfig}>
-            {ImagesData.map((image, index) => (
-                <SwiperSlide key={`slide-${index}`}>
-                    <img
-                        src={image}
-                        alt={`Slide ${index + 1}`}
-                        style={slideStyles}
-                        loading="lazy" // Lazy loading ekledik
-                    />
-                </SwiperSlide>
-            ))}
-        </Swiper>
-
+        </>
 
 
 

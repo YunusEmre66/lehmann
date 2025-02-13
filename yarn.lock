@@ -234,10 +234,10 @@ stylis@4.3.2:
   resolved "https://registry.npmjs.org/stylis/-/stylis-4.3.2.tgz"
   integrity sha512-bhtUjWd/z6ltJiQwg0dUfxEJ+W+jdqQd8TbWLWyeIJHlnsqmGLRFFd8e5mA0AZi/zx90smXRlN66YMTcaSFifg==
 
-swiper@^10.0.0:
-  version "10.0.1"
-  resolved "https://registry.npmjs.org/swiper/-/swiper-10.0.1.tgz"
-  integrity sha512-PDVnFNAIbYS4J5ZirOtpsVyo5ajEA/kEJH/nkzWzbanq5fhCZ9AkkH5z8Q2zIy/V8fSlr8T+fzGDM/Y/K7vxxQ==
+swiper@^11.2.3:
+  version "11.2.3"
+  resolved "https://registry.npmjs.org/swiper/-/swiper-11.2.3.tgz"
+  integrity sha512-24m5tqHCd1Wmp9+86aKDoIGMsZGEjIL++3nuB1UjhAhIlvwj4k0Jikxu9PGQ/VswLpoje6JtMDWo12uu4aS2FA==
 
 tailwindcss@^4.0.5:
   version "4.0.5"

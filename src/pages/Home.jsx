@@ -149,18 +149,7 @@ export default function HomePage() {
         </div>
       </div>
       //! bu diğer swiperı eziyor olabilir
-      <Swiper
-        direction={'vertical'} // yani : dikey
-        slidesPerView={1}
-        spaceBetween={5}
-        mousewheel={true}
-        pagination={{
-          clickable: true,
-        }}
-        onSlideChange={handleSlideChangeWrapper}
-        modules={[Mousewheel, Pagination]}
-        className="mySwiper"
-      >
+      <Swiper>
         <SwiperSlide>
           <div className="swiper-container">
             <Swiper
