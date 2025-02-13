@@ -43,6 +43,7 @@ export default function SpeakerSlider() {
     }), []);
 
     return (
+
         <Swiper {...swiperConfig}>
             {SpeakersImagesData.map((image, index) => (
                 <SwiperSlide key={`slide-${index}`}>
@@ -55,5 +56,6 @@ export default function SpeakerSlider() {
                 </SwiperSlide>
             ))}
         </Swiper>
+
     );
 }

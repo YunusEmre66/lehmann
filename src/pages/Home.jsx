@@ -4,7 +4,6 @@ import { IoIosArrowBack } from 'react-icons/io';
 
 import { Mousewheel, Pagination } from 'swiper/modules';
 import shadowData from '../datas/ShadowData';
-import ImagesData from '../datas/ImagesData';
 import FigureData from '../datas/FigurData';
 import { Navigation } from 'swiper/modules';
 import KarierreTitelData from '../datas/KarierreTitelData';
@@ -149,8 +148,9 @@ export default function HomePage() {
           </a>
         </div>
       </div>
+      //! bu diğer swiperı eziyor olabilir
       <Swiper
-        direction={'vertical'}
+        direction={'vertical'} // yani : dikey
         slidesPerView={1}
         spaceBetween={5}
         mousewheel={true}

@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; // yani tam ekran yüksekliği
   background-color: #f0f0f0;
   color: #333;
   font-size: 2rem;
@@ -37,10 +37,10 @@ const StyledWrapper = styled.div`
 
 const StyledTitle = styled.h1`
   
-  font-size: 2rem;
+  font-size: 5px;
   color: #333;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 5px;
 
   @media (max-width: 768px) {
     font-size: 1.5rem;

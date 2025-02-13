@@ -14,47 +14,42 @@ export default function CoachSlider() {
     const swiperConfig = useMemo(() => ({
         direction: 'vertical',
         autoHeight: true,
-        spaceBetween: 5,
-        slidesPerView: 1,
-        rewind: true,
         pagination: {
             clickable: true,
-            dynamicBullets: true, // Daha modern pagination görünümü
-            
+            el : '.swiper-pagination',
         },
-        mousewheel: {
-            sensitivity: 0.3,    // Mouse tekerleğinin hassasiyeti (0.1 ile 1 arası    
-            thresholdTime: 1000, // İki geçiş arasındaki minimum süre (milisaniye
-            forceToAxis: true,   // Sadece dikey eksende kaydırma
-        },
-        speed: 1000,     
-        
-
-        mousewheelSnap: true,
-        modules: [Mousewheel, Pagination],
+        modules: [Pagination,Mousewheel],
         className: "mySwiper"
     }), []); // Boş dependency array ile sadece bir kez oluşturulur
 
     const slideStyles = useMemo(() => ({
         width: '100%',
         height: 'auto',
-        objectFit: 'cover', // Görüntülerin daha iyi ölçeklenmesi için
+        objectFit: 'contain', // Görüntülerin daha iyi ölçeklenmesi için
         borderRadius: '8px', // Görüntülere yuvarlatılmış köşeler ekler
     }), []);
 
     return (
+
+
         <Swiper {...swiperConfig}>
             {ImagesData.map((image, index) => (
                 <SwiperSlide key={`slide-${index}`}>
-                    <img 
-                        src={image} 
-                        alt={`Slide ${index + 1}`} 
+                    <img
+                        src={image}
+                        alt={`Slide ${index + 1}`}
                         style={slideStyles}
                         loading="lazy" // Lazy loading ekledik
                     />
                 </SwiperSlide>
             ))}
         </Swiper>
-        
+
+
+
+
+
+
+
     );
 }
