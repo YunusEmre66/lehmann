@@ -26,8 +26,9 @@ export default function AmbassadorSlider() {
         >
             {AmbassadorsImagesData.map((image, index) => (
                 <SwiperSlide key={`slide-${index}`}>
-                    <img src={image} alt={`Slide ${index + 1}`} loading="lazy" />
-
+                    <div className="image-wrapper">
+                        <img src={image} alt={`Slide ${index + 1}`} loading="lazy" />
+                    </div>
                 </SwiperSlide>
             ))}
         </Swiper>

@@ -13,8 +13,6 @@ export default function SlideContent() {
   return (
     <StyledWrapper>
       <StyledTitle>
-        {/* <span>Slide: {slideId}</span> */}
-
         {slideId === 0 && <CoachSlider />}
         {slideId === 1 && <CommentatorSlider/>}
         {slideId === 2 && <AmbassadorSlider/>}

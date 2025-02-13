@@ -14,12 +14,6 @@ export default function App() {
         <Route path="/slide" element={<HomePage />}>
           <Route path="/slide/:slideId" element={<SlideContent />} />
         </Route>
-        
-        {/* <Route path="/test" element={<TestSwiper />}>
-          <Route path=":slideId" element={<TestSwiperContent />} />
-        </Route> */}
-
-        {/* redirect to start to "slide/0" */}
         <Route path="/" element={<Navigate to="/slide/0" />} />
       </Routes>
     </BrowserRouter>
