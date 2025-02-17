@@ -33,6 +33,7 @@ body {
 .swiper {
   width: 100%;
   height: 100%;
+  
   overflow: visible !important;
 
 }
@@ -40,14 +41,18 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 25px;
+  height: 100vh; /* Ekran yüksekliğini tamamen kaplasın */
   background: #f2f2f2;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+
+
 }
 
 .swiper-slide img {
+
   display: flex;
   width: 100%;
   height: auto;
@@ -63,7 +68,7 @@ body {
   font-size: 16px;
   color: #EDEFEE;
   background-color: transparent;
-  padding: 10px 20px;
+  padding: 40px 90px;
   border-radius: 5px;
   z-index: 34;
   opacity: 1;
@@ -388,9 +393,10 @@ body {
 .swiper-container .swiper-button-next,
 .swiper-container .swiper-button-prev {
   opacity: 1;
-  color: rgb(8, 8, 26);
+  color: rgb(15, 220, 32);
   position: absolute;
   width: 55px;
+  
   /* Genişliği ayarlar */
   height: 55px;
   /* Yüksekliği ayarlar */
@@ -408,6 +414,16 @@ body {
 
 }
 
+.swiper-container .swiper-button-next {
+  right: 430px;
+  /* Sağdan 50px boşluk bırakır */
+}
+
+.swiper-container .swiper-button-prev {
+  left: 480px;
+  /* Soldan 50px boşluk bırakır */
+}
+
 .swiper-container .swiper-button-next:hover,
 .swiper-container .swiper-button-prev:hover {
   background: #78BEC8;
@@ -416,16 +432,7 @@ body {
   /* Hover durumunda arka plan rengini mavi yapar */
 }
 
-.swiper-container .swiper-button-next {
-  right: 515px;
-  font-size: 12px;
-  /* Sağdan 50px boşluk bırakır */
-}
 
-.swiper-container .swiper-button-prev {
-  left: 515px;
-  /* Soldan 50px boşluk bırakır */
-}
 .fixed-element-karierre {
   position: absolute;
   top: 52%;

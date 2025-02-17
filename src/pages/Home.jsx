@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IoIosArrowBack } from 'react-icons/io';
 
-import {Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import shadowData from '../datas/ShadowData';
 import FigureData from '../datas/FigurData';
 import { Navigation } from 'swiper/modules';
@@ -148,7 +148,7 @@ export default function HomePage() {
           </a>
         </div>
       </div>
-      //! bu diğer swiperı eziyor olabilir
+    
       <Swiper>
         <SwiperSlide>
           <div className="swiper-container">
@@ -175,9 +175,7 @@ export default function HomePage() {
                 </SwiperSlide>
               ))}
 
-              <div>
-                <IoIosArrowBack />
-              </div>
+         
               <div className="swiper-button-next"></div>
               <div className="swiper-button-prev"></div>
             </Swiper>
