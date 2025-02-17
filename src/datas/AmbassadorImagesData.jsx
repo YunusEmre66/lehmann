@@ -12,5 +12,4 @@ const AmmbassadorImagesData = [
     '/images/ambassador/10.jpg',
 
 ]
-
 export default AmmbassadorImagesData;

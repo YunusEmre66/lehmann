@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { IoIosArrowBack } from 'react-icons/io';
-
 import { Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
+import { Outlet, useNavigate } from 'react-router-dom';
+
 import shadowData from '../datas/ShadowData';
 import FigureData from '../datas/FigurData';
-import { Navigation } from 'swiper/modules';
 import KarierreTitelData from '../datas/KarierreTitelData';
 import MainSlide from '../components/slides/MainSlide';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Outlet, useNavigate } from 'react-router-dom';
 
 const { coachTitel, ambassadorTitel, commentatorTitel, speakerTitel } = KarierreTitelData;
 const { coach, ambassador, speaker, moderator, commentator } = shadowData;
@@ -26,20 +25,15 @@ export default function HomePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Simulate a loading delay
     const timer = setTimeout(() => {
       setFadeOut(true);
       setTimeout(() => {
         setLoading(false);
-      }, 1000); // 1 second fade out transition
+      }, 1000); 
     }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
-
-  const handleSlideChangeWrapper = (swiper) => {
-    console.log('handleSlideChangeWrapper: ', swiper.activeIndex);
-  }
 
   const handleSlideChange = (swiper) => {
     console.log('handleSlideChange: ', swiper.activeIndex);
@@ -48,16 +42,14 @@ export default function HomePage() {
       karierreRef.current.style.opacity = '0';
       setTimeout(() => {
         karierreRef.current.style.opacity = '1';
-      }, 100); // 100ms sonra opacity'yi tekrar 1 yaparak görünmesini sağlar
+      }, 1000); 
     }
   };
-
   useEffect(() => {
     if (loading) {
       const interval = setInterval(() => {
         setDotIndex((prevIndex) => (prevIndex + 1) % 5);
       }, 200);
-
       return () => clearInterval(interval);
     }
   }, [loading]);
@@ -93,45 +85,16 @@ export default function HomePage() {
 
   const swiperMainElements = [
     {
-      figure: {
-        src: coachFigure,
-        alt: 'coachFigure',
-        // extendedStyle: { zIndex: 2, marginLeft: '250px' },
-      },
-      title: {
-        src: coachTitel,
-        alt: 'coachTitel',
-      },
+      figure: { src: coachFigure, alt: 'coachFigure' }, title: { src: coachTitel, alt: 'coachTitel', },
     },
     {
-      figure: {
-        src: commentatorFigure,
-        alt: 'commentatorFigure',
-      },
-      title: {
-        src: commentatorTitel,
-        alt: 'commentatorTitel',
-      },
+      figure: { src: commentatorFigure, alt: 'commentatorFigure', }, title: { src: commentatorTitel, alt: 'commentatorTitel', },
     },
     {
-      figure: {
-        src: ambassadorFigure,
-        alt: 'ambassadorFigure',
-      },
-      title: {
-        src: ambassadorTitel,
-        alt: 'ambassadorTitel',
-      },
+      figure: { src: ambassadorFigure, alt: 'ambassadorFigure', }, title: { src: ambassadorTitel, alt: 'ambassadorTitel', },
     },
     {
-      figure: {
-        src: speakerFigure,
-        alt: 'speakerFigure',
-      },
-      title: {
-        src: speakerTitel,
-        alt: 'speakerTitel',
-      },
+      figure: { src: speakerFigure, alt: 'speakerFigure', }, title: { src: speakerTitel, alt: 'speakerTitel', },
     },
   ];
 
@@ -148,7 +111,6 @@ export default function HomePage() {
           </a>
         </div>
       </div>
-    
       <Swiper>
         <SwiperSlide>
           <div className="swiper-container">
@@ -174,8 +136,6 @@ export default function HomePage() {
                   <MainSlide figure={element.figure} title={element.title} extendedStyle={element?.extendedStyle} />
                 </SwiperSlide>
               ))}
-
-         
               <div className="swiper-button-next"></div>
               <div className="swiper-button-prev"></div>
             </Swiper>
@@ -185,7 +145,6 @@ export default function HomePage() {
           <Outlet />
         </>
       </Swiper>
-
     </>
   );
 }

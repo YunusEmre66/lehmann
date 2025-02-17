@@ -32,7 +32,9 @@ export default function CoachSlider() {
             mousewheel={true}
             loop={true}
             pagination={{
-                clickable: true,
+                el: '.swiper-pagination', // Sayfalama için kullanılan HTML elemanı
+                type: 'bullets', // Noktalarla sayfalama yapar
+                clickable: true, // Kullanıcıların sayfalara tıklayarak geçiş yapmasını sağlar
             }}
             modules={[Pagination, Mousewheel]}
             className="mySwiper"

@@ -1,11 +1,13 @@
 {
   "dependencies": {
+    "@uiw/react-back-to-top": "^1.2.3",
     "framer-motion": "^12.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^5.4.0",
     "react-lazy-load-image-component": "^1.6.3",
     "react-router-dom": "^7.1.5",
+    "react-use": "^17.6.0",
     "styled-components": "^6.1.15",
     "swiper": "^11.2.3",
     "tailwindcss": "^4.0.5"

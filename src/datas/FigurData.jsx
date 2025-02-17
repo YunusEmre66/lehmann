@@ -6,6 +6,5 @@ const FigurData = {
     speakerFigure: '/images/figure/speakerfigure.png',
     jensLehmannName: '/images/figure/jenslehmannTitel.png',
 
-
 }
 export default FigurData;
